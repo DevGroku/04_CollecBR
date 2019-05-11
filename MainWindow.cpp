@@ -14,9 +14,17 @@ MainWindow::MainWindow(QWidget *parent)
     top->addWidget(bt_3);
     top->addLayout(middle);
 
+    connect(bt_3, &QPushButton::clicked, this, &MainWindow::fermer );
+    // connect(bt_3, &QPushButton::clicked, [this](){ this->close(); } );
+
     setLayout(top);
 }
 
 MainWindow::~MainWindow()
 {
+}
+
+void MainWindow::fermer()
+{
+  setFixedSize(500, 500);
 }

@@ -17,6 +17,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void fermer();
+
 private:
     //Layout Creation
     QHBoxLayout* middle;
