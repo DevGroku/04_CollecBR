@@ -3,11 +3,12 @@ project(04_CollecBR)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(04_CollecBR main.cpp MainWindow.cpp MainWindow.h)
-
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
+
+add_executable(04_CollecBR main.cpp MainWindow.cpp MainWindow.h)
+
 find_package(Qt5 REQUIRED COMPONENTS Core Widgets)
 
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)
