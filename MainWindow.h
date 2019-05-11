@@ -2,8 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QMenuBar>
+#include <QLayout>
 #include <QPushButton>
+#include <QFrame>
 
 
 
@@ -16,10 +17,14 @@ public:
     ~MainWindow();
 
 private:
-    //Barre de menu
-    QMenuBar *bar_menu;
-    //Différents menus présent dans la barre de menu
-    QMenu *menu_fichier; QMenu *menu_edition;
+    //Layout Creation
+    QHBoxLayout* middle;
+    QVBoxLayout* top;
+
+    //Widget Creation
+    QPushButton* bt_1;
+    QPushButton* bt_2;
+    QPushButton* bt_3;
 };
 
 #endif // MAINWINDOW_H
