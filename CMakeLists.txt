@@ -3,7 +3,7 @@ project(04_CollecBR)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(04_CollecBR main.cpp)
+add_executable(04_CollecBR main.cpp MainWindow.cpp MainWindow.h)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
