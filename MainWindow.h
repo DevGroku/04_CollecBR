@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QWidget>
 #include <QMainWindow>
 #include <QLayout>
 #include <QPushButton>
@@ -8,7 +9,7 @@
 
 
 
-class MainWindow : public QMainWindow
+class MainWindow : public QWidget
 {
 Q_OBJECT
 
