@@ -6,8 +6,8 @@
 #include <QLayout>
 #include <QPushButton>
 #include <QFrame>
-
-
+#include <QRadioButton>
+#include <QTextEdit>
 
 class MainWindow : public QWidget
 {
@@ -20,14 +20,23 @@ public:
     void fermer();
 
 private:
-    //Layout Creation
-    QHBoxLayout* middle;
-    QVBoxLayout* top;
+    //Layout creation
+    QVBoxLayout* see_layout;
 
-    //Widget Creation
-    QPushButton* bt_1;
-    QPushButton* bt_2;
-    QPushButton* bt_3;
+    QHBoxLayout* alreadyseen_layout;
+    QHBoxLayout* bot_layout;
+
+    //QPushButton creation
+    QPushButton* historyseen_button;
+    QPushButton* edit_button;
+
+    //QRadioButton creation
+    QRadioButton* see_radiobutton;
+
+    //QTextEdit creation
+    QTextEdit* moreinfo_text;
+
+
 };
 
 #endif // MAINWINDOW_H
