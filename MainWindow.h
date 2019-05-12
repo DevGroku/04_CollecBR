@@ -8,6 +8,7 @@
 #include <QFrame>
 #include <QRadioButton>
 #include <QTextEdit>
+#include <QLabel>
 
 class MainWindow : public QWidget
 {
@@ -21,10 +22,13 @@ public:
 
 private:
     //Layout creation
+    QVBoxLayout* final_layout;
     QVBoxLayout* see_layout;
+    QVBoxLayout* middle_layout;
 
     QHBoxLayout* alreadyseen_layout;
     QHBoxLayout* bot_layout;
+    QHBoxLayout* poster_layout;
 
     //QPushButton creation
     QPushButton* historyseen_button;
@@ -35,7 +39,13 @@ private:
 
     //QTextEdit creation
     QTextEdit* moreinfo_text;
+    QTextEdit* actor_text;
+    QTextEdit* synopsys_text;
 
+
+    //QLabel creation
+    QLabel* image_label;
+    QLabel* synopsys_label;
 
 };
 
