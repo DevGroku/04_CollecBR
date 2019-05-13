@@ -71,6 +71,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     //Menubar creation
     menu_main = new QMenuBar(this);
+    file_menu = new QMenu(this);
+    edition_menu = new QMenu(this);
     menu_main->addMenu(file_menu);
     menu_main->addMenu(edition_menu);
 
