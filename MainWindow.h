@@ -11,6 +11,7 @@
 #include <QLabel>
 #include <QCheckBox>
 #include <QComboBox>
+#include <QMenuBar>
 
 class MainWindow : public QWidget
 {
@@ -50,11 +51,11 @@ private:
     QTextEdit* synopsys_text;
 
     //QLabel creation
-    //Without border
+
     QLabel* synopsys_label;
     QLabel* actor_label;
     QLabel* genre_label;
-    //With border
+
     QLabel* image_label;
     QLabel* actor1_label;
     QLabel* actor2_label;
@@ -65,6 +66,11 @@ private:
 
     //QComboBox creation
     QComboBox* movie_list;
+
+    //QMenuBar creation
+    QMenuBar* menu_main;
+    QMenu* file_menu;
+    QMenu* edition_menu;
 
 };
 

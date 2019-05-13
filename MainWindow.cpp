@@ -61,12 +61,18 @@ MainWindow::MainWindow(QWidget *parent)
 
     //Layout creation ah the top
     movie_list = new QComboBox(this);
+    for (int i=0; i<10 ; i++) {
+        movie_list->addItem("film");
+    }
     search_button = new QPushButton("Recherche", this);
     top_layout = new QHBoxLayout;
     top_layout->addWidget(movie_list,8);
     top_layout->addWidget(search_button,1);
 
-
+    //Menubar creation
+    menu_main = new QMenuBar(this);
+    menu_main->addMenu(file_menu);
+    menu_main->addMenu(edition_menu);
 
     //We gather all the layout
     final_layout = new QVBoxLayout;
@@ -76,10 +82,13 @@ MainWindow::MainWindow(QWidget *parent)
 
 
 
+
+
     /*Signal & Slot Creation with 2 syntax
     //connect(bt_3, &QPushButton::clicked, this, &MainWindow::fermer );
     // connect(bt_3, &QPushButton::clicked, [this](){ this->close(); } );
      [capture](params) { *code* }*/
+
 
     setLayout(final_layout);
 }
