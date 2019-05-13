@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     bot_layout = new QHBoxLayout;
     bot_layout->addWidget(moreinfo_text,3);
     bot_layout->addLayout(see_layout,1);
+    bot_layout->setContentsMargins(11,11,11,11);
 
     //Layout creation with actor & genre
     actor_label = new QLabel("acteurs",this);
@@ -46,6 +47,7 @@ MainWindow::MainWindow(QWidget *parent)
     genre_layout->addWidget(genre3_label);
     actor_genre_layout->addLayout(actor_layout);
     actor_genre_layout->addLayout(genre_layout);
+    actor_genre_layout->setContentsMargins(11,11,11,11);
 
     //Layout creation at the middle
     image_label = new QLabel(this);
@@ -58,6 +60,7 @@ MainWindow::MainWindow(QWidget *parent)
     middle_layout->addLayout(poster_layout,8);
     middle_layout->addWidget(synopsys_label,1);
     middle_layout->addWidget(synopsys_text,8);
+    middle_layout->setContentsMargins(11,0,11,0);
 
     //Layout creation ah the top
     movie_list = new QComboBox(this);
@@ -68,9 +71,11 @@ MainWindow::MainWindow(QWidget *parent)
     top_layout = new QHBoxLayout;
     top_layout->addWidget(movie_list,8);
     top_layout->addWidget(search_button,1);
+    top_layout->setContentsMargins(11,0,11,11);
 
     //Menubar creation
     menu_main = new QMenuBar(this);
+    menu_main->resize(0,0);
     file_menu = new QMenu("Fichier",this);
     edition_menu = new QMenu("Edition",this);
     menu_main->addMenu(file_menu);
@@ -78,9 +83,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     //We gather all the layout
     final_layout = new QVBoxLayout;
+    final_layout->addWidget(menu_main,1);
     final_layout->addLayout(top_layout,1);
     final_layout->addLayout(middle_layout,6);
     final_layout->addLayout(bot_layout,3);
+    final_layout->setContentsMargins(0,0,0,0);
 
 
 
