@@ -28,14 +28,13 @@ private:
     QVBoxLayout* final_layout;
     QVBoxLayout* see_layout;
     QVBoxLayout* middle_layout;
-    QVBoxLayout* actor_layout;
-    QVBoxLayout* genre_layout;
+    QVBoxLayout* infoacteurgenre_layout;
 
     QHBoxLayout* alreadyseen_layout;
     QHBoxLayout* bot_layout;
     QHBoxLayout* poster_layout;
     QHBoxLayout* top_layout;
-    QHBoxLayout* actor_genre_layout;
+    QVBoxLayout* actor_genre_layout;
 
     //QPushButton creation
     QPushButton* historyseen_button;
@@ -57,12 +56,8 @@ private:
     QLabel* genre_label;
 
     QLabel* image_label;
-    QLabel* actor1_label;
-    QLabel* actor2_label;
-    QLabel* actor3_label;
-    QLabel* genre1_label;
-    QLabel* genre2_label;
-    QLabel* genre3_label;
+    QLabel* listingactor_label;
+    QLabel* listinggenre_label;
 
     //QComboBox creation
     QComboBox* movie_list;

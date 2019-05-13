@@ -27,26 +27,14 @@ MainWindow::MainWindow(QWidget *parent)
     //Layout creation with actor & genre
     actor_label = new QLabel("acteurs",this);
     genre_label = new QLabel("Genres",this);
-    actor1_label = new QLabel("actor1",this);
-    actor2_label = new QLabel("actor2",this);
-    actor3_label = new QLabel("actor3",this);
-    genre1_label = new QLabel("genre1",this);
-    genre2_label = new QLabel("genre2",this);
-    genre3_label = new QLabel("genre3",this);
-    actor_layout = new QVBoxLayout;
-    genre_layout = new QVBoxLayout;
-    actor_genre_layout = new QHBoxLayout;
-    actor_layout->addWidget(actor_label);
-    actor_layout->addWidget(actor1_label);
+    listinggenre_label = new QLabel("genre11111111", this);
+    listingactor_label = new QLabel("actor11111111", this);
+    actor_genre_layout = new QVBoxLayout;
+    actor_genre_layout->addWidget(actor_label);
+    actor_genre_layout->addWidget(listingactor_label);
+    actor_genre_layout->addWidget(genre_label);
+    actor_genre_layout->addWidget(listinggenre_label);
     //actor1_label->setStyleSheet("border: 1px solid black");
-    actor_layout->addWidget(actor2_label);
-    actor_layout->addWidget(actor3_label);
-    genre_layout->addWidget(genre_label);
-    genre_layout->addWidget(genre1_label);
-    genre_layout->addWidget(genre2_label);
-    genre_layout->addWidget(genre3_label);
-    actor_genre_layout->addLayout(actor_layout);
-    actor_genre_layout->addLayout(genre_layout);
     actor_genre_layout->setContentsMargins(11,11,11,11);
 
     //Layout creation at the middle
@@ -75,7 +63,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //Menubar creation
     menu_main = new QMenuBar(this);
-    menu_main->resize(0,0);
+    menu_main->setFixedHeight(25);
     file_menu = new QMenu("Fichier",this);
     edition_menu = new QMenu("Edition",this);
     menu_main->addMenu(file_menu);
@@ -89,15 +77,10 @@ MainWindow::MainWindow(QWidget *parent)
     final_layout->addLayout(bot_layout,3);
     final_layout->setContentsMargins(0,0,0,0);
 
-
-
-
-
     /*Signal & Slot Creation with 2 syntax
     //connect(bt_3, &QPushButton::clicked, this, &MainWindow::fermer );
     // connect(bt_3, &QPushButton::clicked, [this](){ this->close(); } );
      [capture](params) { *code* }*/
-
 
     setLayout(final_layout);
 }
