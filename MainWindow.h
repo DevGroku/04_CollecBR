@@ -12,6 +12,7 @@
 #include <QCheckBox>
 #include <QComboBox>
 #include <QMenuBar>
+#include "AddMoviesWindow.h"
 
 class MainWindow : public QWidget
 {
@@ -67,6 +68,9 @@ private:
     QMenuBar* menu_main;
     QMenu* file_menu;
     QMenu* edition_menu;
+
+    //AddMoviesWindows creation
+    AddMoviesWindow* edit_window;
 
 };
 

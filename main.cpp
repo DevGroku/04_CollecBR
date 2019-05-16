@@ -11,9 +11,5 @@ int main(int argc, char *argv[])
         w.setWindowTitle("CollecBR");
     w.show();
 
-    AddMoviesWindow s;
-
-    s.show();
-
     return a.exec();
 }
