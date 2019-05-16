@@ -22,6 +22,7 @@ public:
     ~MainWindow();
 
     void fermer();
+    void edit();
 
 private:
     //Layout creation

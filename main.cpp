@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "AddMoviesWindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
@@ -9,6 +10,10 @@ int main(int argc, char *argv[])
         w.setFixedSize(600,600);
         w.setWindowTitle("CollecBR");
     w.show();
+
+    AddMoviesWindow s;
+
+    s.show();
 
     return a.exec();
 }

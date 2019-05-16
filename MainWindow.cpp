@@ -1,9 +1,12 @@
 
 #include "mainwindow.h"
+#include "AddMoviesWindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
         : QWidget(parent)
 {
+
+    AddMoviesWindow
     //Layout creation of the movies already seen
     see_check = new QCheckBox("Vu",this);
     historyseen_button = new QPushButton("Historique vues",this);
@@ -87,4 +90,8 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+}
+
+void MainWindow::edit() {
+
 }
