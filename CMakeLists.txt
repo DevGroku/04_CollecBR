@@ -1,20 +1,22 @@
 cmake_minimum_required(VERSION 3.14)
 project(04_CollecBR)
 
+set(NDB_ENGINE_SQLITE ON)
+add_subdirectory(ndb)
+
 set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-add_executable(04_CollecBR main.cpp MainWindow.cpp MainWindow.h AddMoviesWindow.cpp AddMoviesWindow.h)
-
 find_package(Qt5 REQUIRED COMPONENTS Core Widgets)
+
+add_executable(04_CollecBR main.cpp MainWindow.cpp MainWindow.h AddMoviesWindow.cpp AddMoviesWindow.h)
 
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)
 
-add_subdirectory(D:/01-Dev/04-CollecBR/ndb D:/01-Dev/04-CollecBR/ndb/cmake-build)
-target_link_libraries(my_target lib_ndb)
+target_link_libraries(${PROJECT_NAME} lib_ndb)
 
 # deploy // copy Qt dlls to executable directory
 get_target_property(QT5_QMAKE_EXECUTABLE Qt5::qmake IMPORTED_LOCATION)
