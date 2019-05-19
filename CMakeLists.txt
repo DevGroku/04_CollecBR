@@ -13,6 +13,9 @@ find_package(Qt5 REQUIRED COMPONENTS Core Widgets)
 
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)
 
+add_subdirectory(D:/01-Dev/04-CollecBR/ndb D:/01-Dev/04-CollecBR/ndb/cmake-build)
+target_link_libraries(my_target lib_ndb)
+
 # deploy // copy Qt dlls to executable directory
 get_target_property(QT5_QMAKE_EXECUTABLE Qt5::qmake IMPORTED_LOCATION)
 get_filename_component(QT5_WINDEPLOYQT_EXECUTABLE ${QT5_QMAKE_EXECUTABLE} PATH)
