@@ -65,6 +65,8 @@ private:
     QMenuBar* menu_main;
     QMenu* file_menu;
     QMenu* edition_menu;
+    QMenu* movie_menu;
+    QAction* addmovie_action;
 
     //AddMoviesWindows creation
     AddMoviesWindow* edit_window;

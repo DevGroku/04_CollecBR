@@ -67,10 +67,16 @@ MainWindow::MainWindow(QWidget *parent)
     //Menubar creation
     menu_main = new QMenuBar(this);
     menu_main->setFixedHeight(25);
-    file_menu = new QMenu("Fichier",this);
-    edition_menu = new QMenu("Edition",this);
+    file_menu = new QMenu("Fichier", this);
+    edition_menu = new QMenu("Edition", this);
+    movie_menu = new QMenu("Film", this);
     menu_main->addMenu(file_menu);
     menu_main->addMenu(edition_menu);
+    menu_main->addMenu(movie_menu);
+
+    addmovie_action = new QAction("Ajouter un film", this);
+    movie_menu->addAction(addmovie_action);
+
 
     //We gather all the layout
     final_layout = new QVBoxLayout;

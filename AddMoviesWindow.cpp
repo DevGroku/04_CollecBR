@@ -44,8 +44,9 @@ AddMoviesWindow::AddMoviesWindow(QWidget *parent)
 
     setLayout(final_layout);
 
-
-
+    //Close Button connection
+    connect(close_button, &QPushButton::clicked, [this] () {
+        this->close(); });
 }
 
 

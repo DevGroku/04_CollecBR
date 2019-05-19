@@ -9,6 +9,7 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QFormLayout>
+#include <iostream>
 
 class AddMoviesWindow : public QWidget
 {
