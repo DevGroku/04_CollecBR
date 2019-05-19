@@ -22,9 +22,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void fermer();
-    void edit();
-
 private:
     //Layout creation
     QVBoxLayout* final_layout;

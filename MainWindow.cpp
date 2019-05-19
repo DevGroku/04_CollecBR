@@ -86,12 +86,10 @@ MainWindow::MainWindow(QWidget *parent)
      [capture](params) { *code* }*/
 
     setLayout(final_layout);
+
+    connect(edit_button, &QPushButton::clicked, [this] () {edit_window->show();edit_window->setFixedSize(300,300);});
 }
 
 MainWindow::~MainWindow()
 {
-}
-
-void MainWindow::edit() {
-    connect(edit_button, &QPushButton::clicked, [this] () {edit_window->show();} );
 }
