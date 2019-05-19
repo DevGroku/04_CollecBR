@@ -93,7 +93,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     setLayout(final_layout);
 
+    //Connection for edit button
     connect(edit_button, &QPushButton::clicked, [this] () {
+        edit_window->show();
+        edit_window->setFixedSize(300,300);
+        edit_window->setWindowTitle("CollecBR"); });
+
+    //Connection for add movie action in Menu bar
+    connect(addmovie_action, &QAction::triggered, [this] () {
         edit_window->show();
         edit_window->setFixedSize(300,300);
         edit_window->setWindowTitle("CollecBR"); });
