@@ -87,7 +87,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     setLayout(final_layout);
 
-    connect(edit_button, &QPushButton::clicked, [this] () {edit_window->show();edit_window->setFixedSize(300,300);});
+    connect(edit_button, &QPushButton::clicked, [this] () {
+        edit_window->show();
+        edit_window->setFixedSize(300,300);
+        edit_window->setWindowTitle("CollecBR"); });
 }
 
 MainWindow::~MainWindow()

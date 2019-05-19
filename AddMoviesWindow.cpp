@@ -19,7 +19,6 @@ AddMoviesWindow::AddMoviesWindow(QWidget *parent)
     seizure_layout->addRow("Acteur 2 :", actor2_text);
     actor3_text = new QLineEdit(this);
     seizure_layout->addRow("Acteur 3 :", actor3_text);
-    nationality_text = new QLineEdit(this);
 
     genre1_text = new QLineEdit(this);
     seizure_layout->addRow("Genre 1 :", genre1_text);
@@ -27,10 +26,11 @@ AddMoviesWindow::AddMoviesWindow(QWidget *parent)
     seizure_layout->addRow("Genre 2 :", genre2_text);
     genre3_text = new QLineEdit(this);
     seizure_layout->addRow("Genre 3 :", genre3_text);
+
     nationality_text = new QLineEdit(this);
     seizure_layout->addRow("Nationalité :", nationality_text);
 
-    //Creation of bottom layout
+   //Creation of bottom layout
     ok_button = new QPushButton("Valider", this);
     close_button = new QPushButton("Annuler", this);
     bot_layout = new QHBoxLayout;
@@ -42,7 +42,7 @@ AddMoviesWindow::AddMoviesWindow(QWidget *parent)
     final_layout->addLayout(seizure_layout);
     final_layout->addLayout(bot_layout);
 
-    setLayout(seizure_layout);
+    setLayout(final_layout);
 
 
 
